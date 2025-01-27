@@ -12,15 +12,16 @@ int main()
     std::vector<int> Numbers = {100, 50, 10, 1, 2, 7, 11, 17, 53, -8, -4, -9, -72, -64, -80};
 
     //Problem #1
-    int curr_index = 0
+    int curr_index = 0;
     while (curr_index < Players.size())
     {
-        std::cout << Players[1 curr_index] << " ";
+        std::cout << Players[curr_index] << " ";
         curr_index = curr_index + 2;
     }
+    std::cout << std::endl;
 
     //Problem #2
-    int curr_index = 0;
+    curr_index = 0;
     while (curr_index < Numbers.size())
     {
         if (Numbers[curr_index] > 0)
@@ -30,18 +31,66 @@ int main()
         curr_index = curr_index + 1;
     }
     std::cout << std::endl;
+
+    //Problem #3
+    curr_index = 0;
+    int sum = 0;
+    while (curr_index < Numbers.size())
+    {
+        sum = Numbers[curr_index] + sum;
+        curr_index = curr_index + 1;
+    }
+    std::cout << sum << std::endl;
+
+    //problem #4
+    curr_index = 0;
+    while (curr_index < Numbers.size())
+    {
+        if (Numbers[curr_index] % 2 == 1 || Numbers[curr_index] % 2 == -1)
+        {
+            std::cout << Numbers[curr_index] << " ";
+        }
+        curr_index = curr_index + 1;
+    }
+    std::cout << std::endl;
+
+
+    //Problem 5
+    curr_index = 0;
+    while (curr_index < Players.size())
+    {
+        if (Players[curr_index] < "Thor")
+        {
+            std::cout << Players[curr_index] << " ";
+        }
+        curr_index = curr_index + 1;
+    }
+    std::cout << std::endl;
+
+        //Problem 6
+    curr_index = 0;
+    int max = 0;
+    int min = 0;
+    while (curr_index < Numbers.size())
+    {
+        if (max < Numbers[curr_index])
+        {
+            max = Numbers[curr_index];
+        }
+
+        if (min > Numbers[curr_index])
+        {
+            min = Numbers[curr_index];
+        }
+        curr_index = curr_index + 1;
+    }
+    std::cout << max << std::endl;
+    std::cout << min << std::endl;
+
+
     return 0;
 }
 
-// Problem #3
-int curr_index = 0;
-int sum = 0
-while (curr_index < Numbers.size())
-{
-    sum += numbers[curr_index];
-    curr_index++;
-}
-std::cout << "The sum of all numbers in the list is: " << sum << std::endl;
 
 
 

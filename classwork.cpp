@@ -28,14 +28,17 @@ int main()
 
     //Problem 5
     curr_index = 0;
-    while (curr_index < names.size())
+    while (curr_index < Players.size())
     {
-        if (names[curr_index] < "Thor")
+        if (Players[curr_index] < "Thor")
         {
-            std::cout << names[curr_index] << " ";
+            std::cout << Players[curr_index] << " ";
         }
         curr_index = curr_index + 1;
     }
+
+
+
     return 0;
 }
 
